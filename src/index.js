@@ -7,14 +7,24 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { BrowserRouter as Router } from 'react-router-dom'
 
-ReactDOM.render(
 
-    <Router>
-        <App />
-    </Router>
+const startApp = ()=> {
+    ReactDOM.render(
+
+        <Router>
+            <App />
+        </Router>
 
 
-, document.getElementById('root'));
+        , document.getElementById('root'));
+ }
+
+ if (window.cordova){
+     document.addEventListener('deviceready', startApp, false)
+ }else {
+     startApp()
+ }
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

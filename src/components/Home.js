@@ -49,6 +49,7 @@ class Home extends React.Component {
     render() {
         return (
             <>
+                <br /><br />
                 <div className="App">
                     <br /><br />
                     <form onSubmit={this.handleSubmit}>
@@ -59,6 +60,7 @@ class Home extends React.Component {
                         <input type="submit" value="Submit" />
                     </form>
                 </div>
+                
                 <Image/>
 
             </>
